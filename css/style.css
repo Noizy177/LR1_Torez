@@ -1,0 +1,2969 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap");
+
+
+
+
+/* =========================================================
+   1. ОБЩИЕ НАСТРОЙКИ
+   ========================================================= #3d302e*/
+
+:root {
+    --cream: #eae4c7;
+    --brown: #4e3835;
+    --coral: #e38874;
+
+    --white: #ffffff;
+    --text: #3d302e;
+    --soft-bg: #F2EFE4;
+    --border: #ddd7c5;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+
+    background-color: var(--white);
+    color: var(--text);
+
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   АКЦЕНТНЫЙ ШРИФТ
+   ========================================================= */
+
+.city-brand span,
+header nav a,
+button,
+summary,
+legend {
+    font-family: "Elastre", "Segoe UI", Arial, sans-serif;
+
+    font-weight: 400;
+
+    font-variation-settings:
+            "HEXP" 25,
+            "INKT" 15;
+}
+
+
+/* =========================================================
+   ШРИФТ ЗАГОЛОВКОВ
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-variation-settings: normal;
+    letter-spacing: -0.4px;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h3 {
+    letter-spacing: -0.2px;
+}
+
+
+/* =========================================================
+   2. ШАПКА
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 76px;
+
+    padding: 9px clamp(20px, 4vw, 55px);
+
+    display: flex;
+    align-items: center;
+
+    gap: clamp(25px, 5vw, 65px);
+
+    background-color: var(--brown);
+
+    box-shadow: 0 3px 14px rgba(78, 56, 53, 0.18);
+}
+
+
+.city-brand {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--cream);
+
+    text-decoration: none;
+}
+
+
+.city-emblem {
+    width: 54px;
+    height: 60px;
+
+    object-fit: contain;
+
+    border-radius: 0;
+
+    filter:
+            grayscale(1)
+            sepia(0.25)
+            saturate(0.5)
+            brightness(1.25)
+            contrast(1.05);
+
+    opacity: 0.88;
+
+    transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+}
+
+
+.city-brand:hover .city-emblem {
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+
+.city-brand span {
+    color: var(--cream);
+
+    font-size: clamp(26px, 2.3vw, 34px);
+
+    line-height: 1;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   3. НАВИГАЦИЯ
+   ========================================================= */
+
+header nav {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin: 0;
+}
+
+
+header nav a {
+    padding: 8px 12px;
+
+    color: white;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition:
+            color 0.25s ease,
+            background-color 0.25s ease,
+            transform 0.25s ease;
+}
+
+
+header nav a:hover {
+    color: var(--cream);
+
+    background-color: rgba(234, 228, 199, 0.14);
+
+    transform: translateY(-2px);
+}
+
+
+header nav a:active {
+    color: white;
+
+    background-color: var(--coral);
+}
+
+
+header nav a.active {
+    color: white;
+
+    background-color: var(--coral);
+}
+
+
+header nav a.active::after {
+    display: none;
+}
+
+
+/* =========================================================
+   4. ОСНОВНОЙ КОНТЕНТ
+   ========================================================= */
+
+main {
+    position: relative;
+
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 0;
+}
+
+
+section {
+    margin-bottom: 35px;
+
+    padding: 32px;
+
+    background-color: var(--soft-bg);
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 5px 16px rgba(78, 56, 53, 0.06);
+}
+
+
+main > section:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   5. ЗАГОЛОВКИ И ТЕКСТ
+   ========================================================= */
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--brown);
+
+    font-size: clamp(28px, 2.6vw, 36px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.3px;
+}
+
+
+h3 {
+    margin-top: 26px;
+    margin-bottom: 10px;
+
+    color: var(--brown);
+
+    font-size: clamp(21px, 1.8vw, 25px);
+
+    line-height: 1.25;
+}
+
+
+h2 + p {
+    margin-top: 0;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+mark {
+    padding: 3px 7px;
+
+    background-color: var(--cream);
+
+    color: var(--brown);
+
+    border-radius: 6px;
+}
+
+
+blockquote {
+    margin: 26px 0;
+
+    padding: 20px 24px;
+
+    background-color: var(--cream);
+
+    color: var(--brown);
+
+    border-left: 5px solid var(--coral);
+    border-radius: 0 14px 14px 0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   6. ССЫЛКИ
+   ========================================================= */
+
+main a:link {
+    color: #a95f50;
+}
+
+
+main a:visited {
+    color: #765552;
+}
+
+
+main a:hover {
+    color: var(--coral);
+}
+
+
+/* =========================================================
+   7. ИЗОБРАЖЕНИЯ
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   8. ФОТОГАЛЕРЕЯ
+   ========================================================= */
+
+.gallery {
+    columns: 3;
+
+    column-gap: 18px;
+}
+
+
+.gallery > figure {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 0 18px;
+
+    overflow: hidden;
+
+    break-inside: avoid;
+
+    background-color: var(--cream);
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 14px rgba(78, 56, 53, 0.10);
+}
+
+
+.gallery img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 16px;
+
+    transition:
+            transform 0.45s ease,
+            filter 0.45s ease;
+}
+
+
+.gallery figure:hover img {
+    transform: scale(1.035);
+
+    filter: brightness(0.88);
+}
+
+
+.gallery figcaption {
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    padding: 10px 14px;
+
+    background-color: rgba(78, 56, 53, 0.88);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    border-radius: 10px;
+
+    transition:
+            background-color 0.3s ease,
+            transform 0.3s ease;
+}
+
+
+.gallery figure:hover figcaption {
+    background-color: rgba(227, 136, 116, 0.94);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   9. СОБЫТИЯ И СТАТЬИ
+   ========================================================= */
+
+article {
+    margin-bottom: 20px;
+
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--brown);
+
+    border-radius: 14px;
+
+    transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+
+article:nth-of-type(odd) {
+    border-left-color: var(--coral);
+}
+
+
+article:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(78, 56, 53, 0.09);
+}
+
+
+article h3 {
+    margin-top: 0;
+}
+
+
+article p {
+    font-size: 17px;
+}
+
+
+time {
+    color: #7d706d;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   10. ТАБЛИЦА
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    display: block;
+
+    overflow-x: auto;
+
+    background-color: white;
+
+    border-radius: 14px;
+}
+
+
+th,
+td {
+    padding: 13px 14px;
+
+    border: 1px solid var(--border);
+
+    font-size: 16px;
+
+    text-align: left;
+}
+
+
+th {
+    background-color: var(--brown);
+
+    color: white;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f5f1e5;
+}
+
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+
+tbody tr:hover {
+    background-color: var(--cream);
+}
+
+
+/* =========================================================
+   11. КАРТА
+   ========================================================= */
+
+.map-block {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 25px auto;
+}
+
+
+.map-block iframe {
+    display: block;
+
+    width: 100%;
+    height: 520px;
+
+    border: 0;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 16px rgba(78, 56, 53, 0.08);
+}
+
+
+.map-block figcaption {
+    width: 100%;
+
+    margin-top: 10px;
+
+    color: #6c605e;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   12. СПИСКИ
+   ========================================================= */
+
+ul,
+ol {
+    padding-left: 27px;
+}
+
+
+li {
+    margin-bottom: 9px;
+
+    font-size: 17px;
+}
+
+
+dt {
+    margin-top: 20px;
+
+    color: var(--brown);
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+dd {
+    margin-left: 0;
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   13. ИНТЕРЕСНЫЕ ФАКТЫ
+   Единый стиль как на главной странице
+   ========================================================= */
+
+aside,
+details {
+    margin-bottom: 40px;
+
+    padding: 22px;
+
+    background-color: var(--cream);
+
+    border: none;
+    border-left: 5px solid var(--coral);
+
+    border-radius: 0 14px 14px 0;
+
+    box-shadow: none;
+
+    transition:
+            background-color 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+
+aside h2,
+aside h3 {
+    margin-top: 0;
+}
+
+
+aside p:last-child,
+details p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Раскрывающийся факт сохраняет работу details,
+   но визуально выглядит так же, как блок на главной */
+
+details:hover {
+    background-color: #f0e8c9;
+
+    box-shadow: 0 4px 12px rgba(78, 56, 53, 0.08);
+}
+
+
+summary {
+    cursor: pointer;
+
+    color: var(--brown);
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+details[open] summary {
+    margin-bottom: 12px;
+
+    color: var(--brown);
+}
+
+
+/* =========================================================
+   15. СТРАНИЦА РАЗРАБОТЧИКА
+   ========================================================= */
+
+.developer-section {
+    padding: 35px;
+
+    display: flow-root;
+}
+
+
+/*
+   Фото слева.
+   На широком экране оно занимает около половины блока,
+   поэтому текст справа не превращается в узкую колонку
+   и при этом обычно не становится выше изображения.
+*/
+
+.developer-photo {
+    float: left;
+
+    width: 50%;
+    max-width: 580px;
+
+    margin: 0 35px 20px 0;
+
+    background-color: var(--cream);
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 16px rgba(78, 56, 53, 0.10);
+}
+
+
+.developer-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 18px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.developer-photo:hover img {
+    transform: scale(1.03);
+}
+
+
+.developer-photo figcaption {
+    padding: 9px 12px;
+
+    color: #6e615e;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/*
+   У разработчика убираем ограничение ширины текста.
+*/
+
+.developer-section p {
+    max-width: none;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   НАВЫКИ
+   ========================================================= */
+
+.skills {
+    max-width: 700px;
+
+    margin-top: 25px;
+}
+
+
+.skill {
+    margin-bottom: 22px;
+}
+
+
+.skill label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--brown);
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+progress {
+    width: 100%;
+    height: 22px;
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: var(--cream);
+}
+
+
+progress::-webkit-progress-bar {
+    background-color: var(--cream);
+
+    border-radius: 12px;
+}
+
+
+progress::-webkit-progress-value {
+    background-color: var(--coral);
+
+    border-radius: 12px;
+}
+
+
+progress::-moz-progress-bar {
+    background-color: var(--coral);
+
+    border-radius: 12px;
+}
+
+
+meter {
+    width: min(400px, 100%);
+    height: 24px;
+
+    vertical-align: middle;
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   16. ФОРМА ОБРАТНОЙ СВЯЗИ
+   ========================================================= */
+
+form {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+fieldset {
+    margin-bottom: 20px;
+
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+
+legend {
+    padding: 0 10px;
+
+    color: var(--brown);
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-size: 16px;
+}
+
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+
+    color: var(--text);
+
+    background-color: white;
+
+    border: 2px solid #cfc8b6;
+    border-radius: 10px;
+
+    transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+
+input[type="email"],
+input[type="tel"] {
+    background-color: #fffefa;
+}
+
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+
+#agreement {
+    width: auto;
+
+    margin: 0 7px 0 0;
+
+    vertical-align: middle;
+}
+
+
+#agreement + label {
+    display: inline;
+
+    margin: 0;
+
+    vertical-align: middle;
+}
+
+
+input:required,
+textarea:required {
+    border-color: #b8ae98;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--coral);
+
+    box-shadow: 0 0 0 3px rgba(227, 136, 116, 0.18);
+}
+
+
+input:valid,
+textarea:valid {
+    border-color: #7b9b73;
+}
+
+
+input:invalid,
+textarea:invalid {
+    border-color: #c97968;
+}
+
+
+input:checked + label {
+    color: var(--brown);
+}
+
+
+input:disabled {
+    background-color: #e8e5dc;
+}
+
+
+/* =========================================================
+   17. КНОПКИ
+   ========================================================= */
+
+button {
+    margin-top: 15px;
+    margin-right: 10px;
+
+    padding: 11px 22px;
+
+    background-color: var(--brown);
+
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+            background-color 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+
+button:not(:disabled):hover {
+    background-color: var(--coral);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 10px rgba(78, 56, 53, 0.12);
+}
+
+
+button:active {
+    background-color: #c77362;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   18. ПОДВАЛ
+   ========================================================= */
+
+footer {
+    padding: 24px 30px;
+
+    background-color: var(--brown);
+
+    color: var(--cream);
+
+    text-align: center;
+}
+
+
+footer small {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   19. АДАПТИВНОСТЬ
+   ========================================================= */
+
+
+/* =========================================================
+   ПЛАНШЕТЫ
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        min-height: 68px;
+
+        padding: 8px 18px;
+
+        gap: 20px;
+    }
+
+
+    .city-emblem {
+        width: 40px;
+        height: 46px;
+    }
+
+
+    .city-brand span {
+        font-size: 27px;
+    }
+
+
+    header nav {
+        gap: 4px;
+    }
+
+
+    header nav a {
+        padding: 6px 8px;
+
+        font-size: 14px;
+    }
+
+
+    main {
+        width: calc(100% - 28px);
+
+        padding: 28px 0;
+    }
+
+
+    section {
+        padding: 25px;
+
+        border-radius: 16px;
+    }
+
+
+    .gallery {
+        columns: 2;
+
+        column-gap: 16px;
+    }
+
+
+    .gallery > figure {
+        margin-bottom: 16px;
+    }
+
+
+    .map-block iframe {
+        height: 430px;
+    }
+
+
+    /*
+       На среднем экране фото и текст ещё рядом,
+       но фото немного увеличено.
+    */
+
+    .developer-photo {
+        width: 52%;
+
+        margin-right: 25px;
+    }
+}
+
+
+/* =========================================================
+   ТЕЛЕФОНЫ И УЗКИЕ ПЛАНШЕТЫ
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        min-height: auto;
+
+        padding: 8px 10px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        gap: 7px 15px;
+    }
+
+
+    .city-brand {
+        gap: 8px;
+    }
+
+
+    .city-emblem {
+        width: 31px;
+        height: 36px;
+    }
+
+
+    .city-brand span {
+        font-size: 22px;
+
+        letter-spacing: 1px;
+    }
+
+
+    header nav {
+        width: 100%;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        gap: 4px;
+
+        padding-bottom: 2px;
+
+        scrollbar-width: thin;
+    }
+
+
+    header nav a {
+        flex-shrink: 0;
+
+        padding: 5px 8px;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+    }
+
+
+    main {
+        width: calc(100% - 18px);
+
+        padding: 18px 0;
+    }
+
+
+    section {
+        margin-bottom: 18px;
+
+        padding: 18px;
+
+        border-radius: 14px;
+    }
+
+
+    h2 {
+        max-width: 100%;
+
+        font-size: clamp(18px, 5.5vw, 24px);
+        line-height: 1.2;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+
+    h3 {
+        max-width: 100%;
+
+        font-size: clamp(17px, 5vw, 21px);
+        line-height: 1.25;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+
+    p {
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+
+    li,
+    dd {
+        font-size: 16px;
+    }
+
+
+    /* Галерея */
+
+    .gallery {
+        columns: 1;
+    }
+
+
+    .gallery > figure {
+        margin-bottom: 14px;
+
+        border-radius: 13px;
+    }
+
+
+    .gallery img {
+        border-radius: 13px;
+    }
+
+
+    .gallery figcaption {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* Таблица */
+
+    th,
+    td {
+        min-width: 130px;
+
+        padding: 9px;
+
+        font-size: 14px;
+    }
+
+
+    /* Карта */
+
+    .map-block iframe {
+        height: 330px;
+
+        border-radius: 12px;
+    }
+
+
+    /*
+       На телефоне фото и текст больше не пытаются
+       стоять рядом.
+
+       Фото занимает всю доступную ширину,
+       после него идёт текст.
+    */
+
+    .developer-section {
+        padding: 18px;
+    }
+
+
+    .developer-photo {
+        float: none;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0 0 25px 0;
+    }
+
+
+    .developer-section p {
+        width: 100%;
+
+        max-width: none;
+    }
+
+
+    /* Форма */
+
+    fieldset {
+        padding: 16px;
+
+        border-radius: 12px;
+    }
+
+
+    input,
+    textarea,
+    select {
+        font-size: 15px;
+    }
+
+
+    button {
+        width: 100%;
+
+        margin-right: 0;
+
+        border-radius: 10px;
+    }
+
+
+    footer {
+        padding: 20px 15px;
+    }
+}
+
+
+/* =========================================================
+   САМЫЕ УЗКИЕ ЭКРАНЫ
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .city-emblem {
+        width: 28px;
+        height: 32px;
+    }
+
+
+    .city-brand span {
+        font-size: 20px;
+    }
+
+
+    h2 {
+        font-size: 18px;
+    }
+
+
+    h3 {
+        font-size: 17px;
+    }
+
+
+    header nav a {
+        padding: 5px 7px;
+
+        font-size: 11px;
+    }
+
+
+    main {
+        width: calc(100% - 14px);
+    }
+
+
+    section {
+        padding: 15px;
+    }
+
+
+    p {
+        font-size: 16px;
+    }
+
+
+    .map-block iframe {
+        height: 280px;
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   СЦЕНА SOUTH PARK
+   ========================================================= */
+
+.southpark-scene {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    background-color: #79cfe0;
+
+    border: 2px solid #333b48;
+}
+
+
+/* =========================================================
+   ГОРЫ
+   ========================================================= */
+
+.sp-mountain {
+    position: absolute;
+
+    bottom: 115px;
+
+    width: 430px;
+    height: 320px;
+
+    background-color: #246b56;
+
+    clip-path: polygon(
+            50% 0%,
+            0% 100%,
+            100% 100%
+    );
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+/* Левая гора */
+
+.mountain-left {
+    left: -70px;
+
+    background-color: #17644f;
+}
+
+
+/* Центральная гора */
+
+.mountain-center {
+    left: 50%;
+
+    width: 500px;
+    height: 370px;
+
+    transform: translateX(-50%);
+
+    background-color: #39875e;
+
+    z-index: 2;
+}
+
+
+/* Правая гора */
+
+.mountain-right {
+    right: -70px;
+
+    background-color: #17644f;
+}
+
+
+/*  снег гор */
+
+.snow {
+    position: absolute;
+
+    background-color: white;
+
+    border-radius: 50%;
+}
+
+
+.snow-1 {
+    top: 0;
+    left: 50%;
+
+    width: 165px;
+    height: 95px;
+
+    transform: translateX(-50%);
+}
+
+
+.snow-2 {
+    top: 55px;
+    left: 65px;
+
+    width: 220px;
+    height: 85px;
+}
+
+
+.snow-3 {
+    top: 55px;
+    right: 65px;
+
+    width: 170px;
+    height: 85px;
+}
+
+
+/* =========================================================
+   СНЕГ НА ЗЕМЛЕ
+   ========================================================= */
+
+.snow-ground {
+    position: absolute;
+
+    left: 50%;
+    bottom: -175px;
+
+    width: 1500px;
+    height: 360px;
+
+    transform: translateX(-50%);
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   КОНТЕЙНЕР ПЕРСОНАЖЕЙ
+   ========================================================= */
+
+#wrapper {
+    position: absolute;
+
+    left: 50%;
+    bottom: 45px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 18px;
+
+    width: max-content;
+
+    margin: 0;
+
+    transform: translateX(-50%) scale(1.2);
+
+    transform-origin: bottom center;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   КАРТМАН
+   ========================================================= */
+
+#eric {
+    position: relative;
+
+    width: 185px;
+    height: 190px;
+}
+
+
+/* Жёлтый шарик сверху */
+
+#eric::after {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    left: 76px;
+
+    width: 32px;
+    height: 13px;
+
+    background-color: #f0e50c;
+
+    border-radius: 50%;
+
+    z-index: 99;
+}
+
+
+/* Голова */
+
+#eric .face {
+    position: absolute;
+
+    top: 24px;
+    left: 26px;
+
+    width: 132px;
+    height: 106px;
+
+    overflow: hidden;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50%;
+
+    z-index: 15;
+}
+
+
+/* Шапка */
+
+#eric .face .hat {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 132px;
+    height: 78px;
+
+    background-color: #49c2b5;
+
+    border-radius: 50%;
+}
+
+
+/* Жёлтая полоса шапки */
+
+#eric .face .hat::before {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: -2px;
+
+    width: 136px;
+    height: 46px;
+
+    background-color: #f0e50c;
+
+    border-radius: 50%;
+}
+
+
+/* Лицо поверх нижней части шапки */
+
+#eric .face .hat::after {
+    content: "";
+
+    position: absolute;
+
+    top: 34px;
+    left: -1px;
+
+    width: 134px;
+    height: 46px;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50%;
+}
+
+
+/* Глаза */
+
+#eric .face .eye-left,
+#eric .face .eye-right {
+    position: absolute;
+
+    top: 35px;
+    left: 36px;
+
+    width: 32px;
+    height: 37px;
+
+    background-color: white;
+
+    border-radius: 65% 50%;
+}
+
+
+#eric .face .eye-right {
+    left: 69px;
+
+    border-radius: 50% 65%;
+}
+
+
+/* Зрачки */
+
+#eric .face .eye-left::after,
+#eric .face .eye-right::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: black;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Рот */
+
+#eric .face .smile {
+    position: absolute;
+
+    top: 79px;
+    left: 59px;
+
+    width: 22px;
+    height: 8px;
+
+    border-radius: 65% 50%;
+
+    box-shadow: 0 1px 0 black;
+}
+
+
+/* Подбородок */
+
+#eric .face .smile::after {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 3px;
+
+    width: 16px;
+    height: 6px;
+
+    border-bottom: 1px solid #c39b77;
+
+    border-radius: 50%;
+}
+
+
+/* Куртка */
+
+#eric .body {
+    position: absolute;
+
+    top: 80px;
+    left: 13px;
+
+    width: 160px;
+    height: 90px;
+
+    background-color: #c60735;
+
+    border-radius: 50% 50% 33% 33%;
+
+    z-index: 10;
+}
+
+
+/* Молния */
+
+#eric .body .zipper {
+    position: absolute;
+
+    top: 48px;
+    left: 86px;
+
+    width: 1px;
+    height: 42px;
+
+    background-color: #5c0011;
+}
+
+
+/* Пуговицы */
+
+#eric .body .button-1,
+#eric .body .button-2,
+#eric .body .button-3 {
+    position: absolute;
+
+    top: 50px;
+    left: 82px;
+
+    width: 2px;
+    height: 4px;
+
+    background-color: #5c0011;
+
+    border-radius: 50%;
+}
+
+
+#eric .body .button-2 {
+    top: 67px;
+}
+
+
+#eric .body .button-3 {
+    top: 82px;
+}
+
+
+/* Левая варежка */
+
+#eric .body .hand-left {
+    position: absolute;
+
+    top: 38px;
+    left: -11px;
+
+    width: 29px;
+    height: 22px;
+
+    background-color: #ede40b;
+
+    border-radius: 60% 160% 50% 100%;
+
+    z-index: 10;
+}
+
+
+/* Правая варежка */
+
+#eric .body .hand-right {
+    position: absolute;
+
+    top: 35px;
+    left: 140px;
+
+    width: 29px;
+    height: 25px;
+
+    background-color: #ede40b;
+
+    border-radius: 60% 50% 50% 70%;
+
+    z-index: 10;
+}
+
+
+#eric .body .hand-right::before {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+    left: -5px;
+
+    width: 29px;
+    height: 18px;
+
+    background-color: #ede40b;
+
+    border-radius: 100% 28%;
+}
+
+
+/* Низ одежды */
+
+#eric .legs {
+    position: absolute;
+
+    left: 22px;
+    top: 154px;
+
+    width: 140px;
+    height: 23px;
+
+    background-color: #623919;
+
+    border-radius: 0 0 10px 10px / 37px;
+
+    z-index: 5;
+}
+
+
+/* Ботинки */
+
+#eric .legs .foot-left,
+#eric .legs .foot-right {
+    position: absolute;
+
+    top: 18px;
+    left: 2px;
+
+    width: 70px;
+    height: 8px;
+
+    background-color: #21241e;
+
+    border-radius: 50% 50% 0 0 / 7px;
+
+    z-index: 5;
+}
+
+
+#eric .legs .foot-right {
+    left: 69px;
+}
+
+
+/* =========================================================
+   КАЙЛ
+   ========================================================= */
+
+#kyle {
+    position: relative;
+
+    width: 140px;
+    height: 190px;
+}
+
+
+/* Голова */
+
+#kyle .face {
+    position: absolute;
+
+    top: 18px;
+    left: 15px;
+
+    width: 110px;
+    height: 110px;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50%;
+
+    z-index: 15;
+}
+
+
+/* Шапка */
+
+#kyle .face .hat {
+    position: absolute;
+
+    top: -3px;
+    left: 4px;
+
+    width: 104px;
+    height: 47px;
+
+    border: 10px solid #5be219;
+    border-top-width: 18px;
+    border-bottom-width: 0;
+
+    background-color: #25b832;
+
+    border-radius: 10px 10px 0 0;
+
+    z-index: 5;
+}
+
+
+/* Левое ухо шапки */
+
+#kyle .face .hat::before {
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+    left: -26px;
+
+    width: 24px;
+    height: 50px;
+
+    background-color: #5be219;
+
+    border-radius: 300% 70%;
+}
+
+
+/* Правое ухо шапки */
+
+#kyle .face .hat::after {
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+    left: 85px;
+
+    width: 24px;
+    height: 50px;
+
+    background-color: #5be219;
+
+    border-radius: 70% 300%;
+}
+
+
+/* Глаза */
+
+#kyle .face .eye-left,
+#kyle .face .eye-right {
+    position: absolute;
+
+    top: 40px;
+    left: 22px;
+
+    width: 32px;
+    height: 37px;
+
+    background-color: white;
+
+    border-radius: 65% 50%;
+}
+
+
+#kyle .face .eye-right {
+    left: 55px;
+
+    border-radius: 50% 65%;
+}
+
+
+/* Зрачки */
+
+#kyle .face .eye-left::after,
+#kyle .face .eye-right::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: black;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Рот */
+
+#kyle .face .smile {
+    position: absolute;
+
+    top: 87px;
+    left: 47px;
+
+    width: 15px;
+    height: 8px;
+
+    border-radius: 65% 50%;
+
+    box-shadow: 0 1px 0 black;
+}
+
+
+/* Куртка */
+
+#kyle .body {
+    position: absolute;
+
+    top: 98px;
+    left: 19px;
+
+    width: 100px;
+    height: 72px;
+
+    background-color: #eb5a10;
+
+    border-radius: 50% 50% 33% 33% / 100px 100px 17px 17px;
+
+    z-index: 10;
+}
+
+
+/* Зелёный воротник */
+
+#kyle .body::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 12px;
+
+    width: 78px;
+    height: 31px;
+
+    border-bottom: 13px solid #54db10;
+
+    border-radius: 50%;
+}
+
+
+/* Молния */
+
+#kyle .body .zipper {
+    position: absolute;
+
+    top: 35px;
+    left: 49px;
+
+    width: 1px;
+    height: 34px;
+
+    background-color: #5c0011;
+}
+
+
+#kyle .body .button-2 {
+    top: 51px;
+}
+
+
+#kyle .body .button-3 {
+    top: 62px;
+}
+
+
+/* карманы */
+
+
+#kyle .body .kyle-pocket {
+    position: absolute;
+
+    top: 40px;
+
+    width: 16px;
+    height: 21px;
+
+    border: 1px solid #5c0011;
+    box-sizing: border-box;
+
+    background-color: transparent;
+
+    overflow: hidden;
+}
+
+#kyle .body .pocket-left {
+    left: 25px;
+}
+
+#kyle .body .pocket-right {
+    right: 25px;
+}
+
+
+/* Левая линия кормана */
+#kyle .body .kyle-pocket::before {
+    content: "";
+
+    position: absolute;
+
+    top: 1px;
+    left: -1px;
+
+    width: 11px;
+    height: 1px;
+
+    background-color: #5c0011;
+
+    transform: rotate(42deg);
+    transform-origin: left center;
+}
+
+
+/* Правая линия кормана */
+#kyle .body .kyle-pocket::after {
+    content: "";
+
+    position: absolute;
+
+    top: 1px;
+    right: -1px;
+
+    width: 11px;
+    height: 1px;
+
+    background-color: #5c0011;
+
+    transform: rotate(-42deg);
+    transform-origin: right center;
+}
+
+
+/* Варежки */
+
+#kyle .body .hand-left,
+#kyle .body .hand-right {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: #2f9c12;
+
+    border: none;
+
+    border-radius: 50%;
+
+    z-index: 10;
+}
+
+
+#kyle .body .hand-left {
+    top: 42px;
+    left: -6px;
+}
+
+
+#kyle .body .hand-right {
+    top: 45px;
+    left: 83px;
+}
+
+
+
+#kyle .body .hand-left::before,
+#kyle .body .hand-right::before {
+    display: none;
+}
+
+
+/* Ноги */
+
+#kyle .legs {
+    position: absolute;
+
+    left: 32px;
+    top: 154px;
+
+    width: 75px;
+    height: 25px;
+
+    background-color: #326b53;
+
+    border-radius: 44px 44px 0 0;
+
+    z-index: 5;
+}
+
+
+#kyle .legs .foot-left,
+#kyle .legs .foot-right {
+    position: absolute;
+
+    top: 21px;
+
+    width: 45px;
+    height: 5px;
+
+    background-color: #21241e;
+
+    border-radius: 50% 50% 0 0 / 7px;
+
+    z-index: 5;
+}
+
+
+#kyle .legs .foot-left {
+    left: -5px;
+}
+
+
+#kyle .legs .foot-right {
+    left: 33px;
+}
+
+
+/* =========================================================
+   СТЭН
+   ========================================================= */
+
+#stan {
+    position: relative;
+
+    width: 125px;
+    height: 190px;
+}
+
+
+/* Помпон */
+
+#stan::after {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: 48px;
+
+    width: 24px;
+    height: 23px;
+
+    background-color: #be032b;
+
+    border-radius: 50%;
+
+    z-index: 99;
+}
+
+
+/* Голова */
+
+#stan .face {
+    position: absolute;
+
+    top: 18px;
+    left: 6px;
+
+    width: 110px;
+    height: 112px;
+
+    overflow: hidden;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50%;
+
+    z-index: 15;
+}
+
+
+/* Шапка */
+
+#stan .face .hat {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 112px;
+    height: 78px;
+
+    background-color: #4a6398;
+
+    border-radius: 50%;
+}
+
+
+/* Красная полоса шапки */
+
+#stan .face .hat::before {
+    content: "";
+
+    position: absolute;
+
+    top: 32px;
+    left: -3px;
+
+    width: 134px;
+    height: 48px;
+
+    background-color: #be032b;
+
+    border-radius: 50% 70%;
+}
+
+
+/* Лицо поверх шапки */
+
+#stan .face .hat::after {
+    content: "";
+
+    position: absolute;
+
+    top: 43px;
+    left: -6px;
+
+    width: 137px;
+    height: 42px;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50% 70%;
+}
+
+
+/* Глаза */
+
+#stan .face .eye-left,
+#stan .face .eye-right {
+    position: absolute;
+
+    top: 45px;
+    left: 26px;
+
+    width: 31px;
+    height: 36px;
+
+    background-color: white;
+
+    border-radius: 65% 50%;
+}
+
+
+#stan .face .eye-right {
+    left: 58px;
+
+    border-radius: 50% 65%;
+}
+
+
+/* Зрачки */
+
+#stan .face .eye-left::after,
+#stan .face .eye-right::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: black;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Рот */
+
+#stan .face .smile {
+    position: absolute;
+
+    top: 89px;
+    left: 48px;
+
+    width: 18px;
+    height: 8px;
+
+    border-radius: 65% 50%;
+
+    box-shadow: 0 1px 0 black;
+}
+
+
+/* Куртка */
+
+#stan .body {
+    position: absolute;
+
+    top: 99px;
+    left: 10px;
+
+    width: 100px;
+    height: 70px;
+
+    background-color: #905947;
+
+    border-radius: 50% 50% 33% 33% / 100px 100px 17px 17px;
+
+    z-index: 10;
+}
+
+
+/* Красный воротник */
+
+#stan .body::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 12px;
+
+    width: 78px;
+    height: 31px;
+
+    border-bottom: 13px solid #c00531;
+
+    border-radius: 50%;
+}
+
+
+/* Молния */
+
+#stan .body .zipper {
+    position: absolute;
+
+    top: 35px;
+    left: 49px;
+
+    width: 1px;
+    height: 34px;
+
+    background-color: #5c0011;
+}
+
+
+/* Пуговицы */
+
+#stan .body .button-1,
+#stan .body .button-2,
+#stan .body .button-3 {
+    position: absolute;
+
+    top: 39px;
+    left: 44px;
+
+    width: 2px;
+    height: 4px;
+
+    background-color: #5c0011;
+
+    border-radius: 50%;
+}
+
+
+#stan .body .button-2 {
+    top: 51px;
+}
+
+
+#stan .body .button-3 {
+    top: 62px;
+}
+
+
+/* Варежки */
+
+#stan .body .hand-left,
+#stan .body .hand-right {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: #980327;
+
+    border: none;
+
+    border-radius: 50%;
+
+    z-index: 10;
+}
+
+
+#stan .body .hand-left {
+    top: 42px;
+    left: -6px;
+}
+
+
+#stan .body .hand-right {
+    top: 45px;
+    left: 83px;
+}
+
+
+#stan .body .hand-left::before,
+#stan .body .hand-right::before {
+    display: none;
+}
+
+
+/* Ноги */
+
+#stan .legs {
+    position: absolute;
+
+    left: 22px;
+    top: 154px;
+
+    width: 80px;
+    height: 25px;
+
+    background-color: #4a6398;
+
+    border-radius: 44px 44px 0 0;
+
+    z-index: 5;
+}
+
+
+#stan .legs .foot-left,
+#stan .legs .foot-right {
+    position: absolute;
+
+    top: 21px;
+
+    width: 48px;
+    height: 5px;
+
+    background-color: #21241e;
+
+    border-radius: 50% 50% 0 0 / 7px;
+
+    z-index: 5;
+}
+
+
+#stan .legs .foot-left {
+    left: -8px;
+}
+
+
+#stan .legs .foot-right {
+    left: 36px;
+}
+
+
+/* =========================================================
+   КЕННИ
+   ========================================================= */
+
+#kenny {
+    position: relative;
+
+    width: 125px;
+    height: 190px;
+}
+
+
+/* Голова */
+
+#kenny .face {
+    position: absolute;
+
+    top: 23px;
+    left: 5px;
+
+    width: 115px;
+    height: 116px;
+
+    background-color: #f0d5ab;
+
+    border-radius: 50%;
+
+    z-index: 15;
+}
+
+
+/* Оранжевый капюшон */
+
+#kenny .face .hat {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border: 26px solid #ed5c10;
+    border-left-width: 23px;
+    border-right-width: 23px;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 0 #8d370a;
+
+    z-index: 10;
+}
+
+
+/* Тёмная левая часть капюшона */
+
+#kenny .face::before {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: 0;
+    right: -30px;
+    bottom: 25px;
+
+    border-left: 34px solid #653c1a;
+
+    border-radius: 50%;
+
+    z-index: 5;
+}
+
+
+/* Тёмная правая часть капюшона */
+
+#kenny .face::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: -30px;
+    right: 0;
+    bottom: 25px;
+
+    border-right: 34px solid #653c1a;
+
+    border-radius: 50%;
+
+    z-index: 5;
+}
+
+
+/* Глаза */
+
+#kenny .face .eye-left,
+#kenny .face .eye-right {
+    position: absolute;
+
+    top: 41px;
+    left: 26px;
+
+    width: 31px;
+    height: 36px;
+
+    background-color: white;
+
+    border-radius: 65% 50%;
+}
+
+
+#kenny .face .eye-right {
+    left: 58px;
+
+    border-radius: 50% 65%;
+}
+
+
+/* Зрачки */
+
+#kenny .face .eye-left::after,
+#kenny .face .eye-right::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: black;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Линия вокруг лица */
+
+#kenny .face .lace {
+    position: absolute;
+
+    top: 26px;
+    left: 17px;
+    right: 18px;
+    bottom: 17px;
+
+    border: 1px solid #653c1a;
+
+    border-radius: 50%;
+
+    z-index: 15;
+}
+
+
+/* Левая верёвочка */
+
+#kenny .face .lace::before {
+    content: "";
+
+    position: absolute;
+
+    top: 61px;
+    left: 35px;
+
+    width: 2px;
+    height: 18px;
+
+    background-color: #653c1a;
+}
+
+
+/* Правая верёвочка */
+
+#kenny .face .lace::after {
+    content: "";
+
+    position: absolute;
+
+    top: 61px;
+    left: 44px;
+
+    width: 2px;
+    height: 18px;
+
+    background-color: #653c1a;
+}
+
+
+/* Куртка */
+
+#kenny .body {
+    position: absolute;
+
+    top: 115px;
+    left: 10px;
+
+    width: 100px;
+    height: 56px;
+
+    background-color: #ec5b0f;
+
+    border-radius: 50% 50% 33% 33% / 100px 100px 17px 17px;
+
+    box-shadow: 0 1px 0 #8d370a;
+
+    z-index: 10;
+}
+
+
+/* Молния */
+
+#kenny .body .zipper {
+    position: absolute;
+
+    top: 14px;
+    left: 53px;
+
+    width: 1px;
+    height: 42px;
+
+    background-color: #5c0011;
+}
+
+
+/* Варежки */
+
+#kenny .body .hand-left,
+#kenny .body .hand-right {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: #4f3118;
+
+    border: none;
+
+    border-radius: 50%;
+
+    z-index: 10;
+}
+
+
+#kenny .body .hand-left {
+    top: 32px;
+    left: -2px;
+}
+
+
+#kenny .body .hand-right {
+    top: 33px;
+    left: 87px;
+}
+
+
+#kenny .body .hand-left::before,
+#kenny .body .hand-right::before {
+    display: none;
+}
+
+
+/* Ноги */
+
+#kenny .legs {
+    position: absolute;
+
+    left: 22px;
+    top: 154px;
+
+    width: 80px;
+    height: 25px;
+
+    background-color: #ec5b0f;
+
+    border-radius: 44px 44px 0 0;
+
+    z-index: 5;
+}
+
+
+#kenny .legs .foot-left,
+#kenny .legs .foot-right {
+    position: absolute;
+
+    top: 21px;
+
+    width: 48px;
+    height: 5px;
+
+    background-color: #21241e;
+
+    border-radius: 50% 50% 0 0 / 7px;
+
+    z-index: 5;
+}
+
+
+#kenny .legs .foot-left {
+    left: -8px;
+}
+
+
+#kenny .legs .foot-right {
+    left: 36px;
+}

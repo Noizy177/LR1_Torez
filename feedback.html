@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link
+            rel="preload"
+            href="fonts/Elastre.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+    >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="city-brand">
+        <img
+                src="images/gerb.png"
+                alt="Герб города Тореза"
+                class="city-emblem"
+        >
+
+        <span>ТОРЕЗ</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="history.html">История</a>
+        <a href="infrastructure.html">Инфраструктура</a>
+        <a href="culture.html">Культура</a>
+        <a href="developer.html">О разработчике</a>
+        <a class="active"  href="feedback.html">Обратная связь</a>
+        <a href="southpark.html">South Park</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <section>
+        <h2>Обратная связь</h2>
+
+        <p>
+            Если у вас есть вопрос, предложение или замечание,
+            заполните форму ниже.
+        </p>
+
+
+        <form>
+
+            <fieldset>
+
+                <legend>Контактные данные</legend>
+
+
+                <label for="name">Имя:</label>
+
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Введите ваше имя"
+                        minlength="2"
+                        maxlength="30"
+                        required>
+
+
+                <label for="email">Email:</label>
+
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@mail.ru"
+                        required>
+
+
+                <label for="phone">Телефон:</label>
+
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+7 999 123-45-67"
+                        pattern="\+7\s\d{3}\s\d{3}-\d{2}-\d{2}">
+
+            </fieldset>
+
+
+            <fieldset>
+
+                <legend>Сообщение</legend>
+
+
+                <label for="topic">Тема обращения:</label>
+
+                <select id="topic" name="topic">
+
+                    <option value="question">
+                        Вопрос
+                    </option>
+
+                    <option value="suggestion">
+                        Предложение
+                    </option>
+
+                    <option value="error">
+                        Сообщить об ошибке
+                    </option>
+
+                </select>
+
+
+                <label for="message">Сообщение:</label>
+
+                <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Введите сообщение"
+                        minlength="10"
+                        required>
+                </textarea>
+
+            </fieldset>
+
+
+            <div>
+
+                <input
+                        type="checkbox"
+                        id="agreement"
+                        name="agreement"
+                        required>
+
+                <label for="agreement">
+                    Я согласен на обработку введённых данных
+                </label>
+
+            </div>
+
+
+            <button type="submit">
+                Отправить
+            </button>
+
+
+            <button type="reset">
+                Очистить
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <small>Учебный проект о городе Торез</small>
+</footer>
+
+</body>
+</html>

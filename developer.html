@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О разработчике</title>
+    <link
+            rel="preload"
+            href="fonts/Elastre.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+    >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="city-brand">
+        <img
+                src="images/gerb.png"
+                alt="Герб города Тореза"
+                class="city-emblem"
+        >
+
+        <span>ТОРЕЗ</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="history.html">История</a>
+        <a href="infrastructure.html">Инфраструктура</a>
+        <a href="culture.html">Культура</a>
+        <a class="active" href="developer.html">О разработчике</a>
+        <a href="feedback.html">Обратная связь</a>
+        <a href="southpark.html">South Park</a>
+    </nav>
+</header>
+
+
+    <main>
+
+        <section class="developer-section">
+            <h2>О разработчике</h2>
+
+            <figure class="developer-photo">
+                <img src="images/developer.jpg"
+                     alt="Фотография разработчика">
+
+            </figure>
+
+            <h3>Уманцев Давид Артемович</h3>
+
+            <p>
+                Студент направления «Информатика и вычислительная техника».
+                Интересуюсь программированием, компьютерными технологиями
+                и веб-разработкой.
+            </p>
+
+            <p>
+                Данный сайт разработан криво-косо, но с душой :)
+            </p>
+        </section>
+
+
+    <section>
+        <h2>Профессиональные навыки</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <label for="html-skill">HTML — 50%</label>
+
+                <progress
+                        id="html-skill"
+                        value="70"
+                        max="100"
+                >
+                    70%
+                </progress>
+            </div>
+
+
+            <div class="skill">
+                <label for="css-skill">CSS — 50%</label>
+
+                <progress
+                        id="css-skill"
+                        value="60"
+                        max="100"
+                >
+                    60%
+                </progress>
+            </div>
+
+
+            <div class="skill">
+                <label for="programming-skill">Программирование — 65%</label>
+
+                <progress
+                        id="programming-skill"
+                        value="65"
+                        max="100"
+                >
+                    65%
+                </progress>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Об учебном проекте</h2>
+
+        <p>
+Чему то научиться
+        </p>
+        <p>
+            Выполнение лабораторной работы:
+            <meter min="0" max="100" value="100">100%</meter>
+        </p>
+    </section>
+
+</main>
+
+
+<footer>
+    <small>Учебный проект о городе Торез</small>
+</footer>
+
+</body>
+</html>
